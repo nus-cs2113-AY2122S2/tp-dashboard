@@ -1,58 +1,26 @@
-Feb 28, 2022 12:09:08 AM reposense.parser.CsvParser validateHeader
+Mar 01, 2022 12:10:31 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Repository's Location,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  Ignore standalone config,  Ignore Commits List
-Feb 28, 2022 12:09:08 AM reposense.parser.CsvParser validateHeader
+Mar 01, 2022 12:10:32 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Author's GitHub ID,  Branch,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Feb 28, 2022 12:09:08 AM reposense.parser.CsvParser validateHeader
+Mar 01, 2022 12:10:32 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, group-config.csv, and recognized columns: Globs,  Repository's Location,  Group Name
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T10-3/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T10-1/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T10-2/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T10-4/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-2/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-1/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-3/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T10-1/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T10-2/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-4/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T10-4/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T10-4/tp.git' repos/AY2122S2-CS2113T-T10-4_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113T-T10-4_tp/tp_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T10-1/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T10-1/tp.git' repos/AY2122S2-CS2113T-T10-1_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113T-T10-1_tp/tp_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-3/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-1/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T10-2/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T10-3/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T10-3/tp.git' repos/AY2122S2-CS2113T-T10-3_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113T-T10-3_tp/tp_bare'...
@@ -68,19 +36,27 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-1/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-4/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-2/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-4/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-2/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-1/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T10-4/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T10-4/tp.git' repos/AY2122S2-CS2113T-T10-4_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113T-T10-4_tp/tp_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T10-2/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T10-2/tp.git' repos/AY2122S2-CS2113T-T10-2_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113T-T10-2_tp/tp_bare'...
@@ -96,14 +72,12 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-3/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-3/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F10-4/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F10-4/tp.git' repos/AY2122S2-CS2113-F10-4_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113-F10-4_tp/tp_bare'...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-4/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T10-1/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T10-1/tp.git' repos/AY2122S2-CS2113T-T10-1_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113T-T10-1_tp/tp_bare'...
 fatal: could not read Username for 'https://github.com': No such device or address
 
 	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
@@ -116,11 +90,17 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-3/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-T11-3/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-3/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F10-2/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-4/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-2/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F10-3/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F10-1/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F10-1/tp.git' repos/AY2122S2-CS2113-F10-1_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113-F10-1_tp/tp_bare'...
@@ -136,27 +116,11 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-1/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F10-2/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F10-2/tp.git' repos/AY2122S2-CS2113-F10-2_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113-F10-2_tp/tp_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-4/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-3/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-T11-3/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F10-3/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F10-3/tp.git' repos/AY2122S2-CS2113-F10-3_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113-F10-3_tp/tp_bare'...
@@ -172,53 +136,51 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-2/tp.git...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-4/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-1/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-T11-1/tp.git to complete...
-Feb 28, 2022 12:09:08 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F10-4/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F10-4/tp.git' repos/AY2122S2-CS2113-F10-4_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113-F10-4_tp/tp_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-4/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-4/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F10-2/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F10-2/tp.git' repos/AY2122S2-CS2113-F10-2_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113-F10-2_tp/tp_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-2/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-T11-2/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-T11-3/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-T11-3/tp.git' repos/AY2122S2-CS2113-T11-3_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113-T11-3_tp/tp_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F12-3/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-T11-2/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-T11-2/tp.git' repos/AY2122S2-CS2113-T11-2_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113-T11-2_tp/tp_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-4/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F12-3/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-T11-1/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-T11-1/tp.git' repos/AY2122S2-CS2113-T11-1_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113-T11-1_tp/tp_bare'...
@@ -234,9 +196,11 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F12-2/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F12-3/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F12-3/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T09-4/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T09-4/tp.git' repos/AY2122S2-CS2113T-T09-4_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113T-T09-4_tp/tp_bare'...
@@ -252,18 +216,34 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F12-1/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-T11-4/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-T11-3/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-T11-3/tp.git' repos/AY2122S2-CS2113-T11-3_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113-T11-3_tp/tp_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F12-2/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F12-2/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F12-1/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-T11-4/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F12-2/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F12-2/tp.git' repos/AY2122S2-CS2113-F12-2_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113-F12-2_tp/tp_bare'...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-T11-2/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-T11-2/tp.git' repos/AY2122S2-CS2113-T11-2_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113-T11-2_tp/tp_bare'...
 fatal: could not read Username for 'https://github.com': No such device or address
 
 	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
@@ -276,29 +256,11 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-2/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-2/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-T11-4/tp[master]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-T11-4/tp.git' repos/AY2122S2-CS2113-T11-4_tp/tp_bare on path . :
-Cloning into bare repository 'repos/AY2122S2-CS2113-T11-4_tp/tp_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-3/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113-F12-1/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113-F12-1/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F12-3/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F12-3/tp.git' repos/AY2122S2-CS2113-F12-3_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113-F12-3_tp/tp_bare'...
@@ -314,11 +276,31 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-1/tp.git...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-1/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-2/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-2/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F12-2/tp[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F12-2/tp.git' repos/AY2122S2-CS2113-F12-2_tp/tp_bare on path . :
+Cloning into bare repository 'repos/AY2122S2-CS2113-F12-2_tp/tp_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:44)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:317)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:122)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:278)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:224)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-3/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-3/tp.git to complete...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113-F12-1/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113-F12-1/tp.git' repos/AY2122S2-CS2113-F12-1_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113-F12-1_tp/tp_bare'...
@@ -334,9 +316,11 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-3/tp.git to complete...
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AY2122S2-CS2113T-T09-1/tp.git...
+Mar 01, 2022 12:10:32 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AY2122S2-CS2113T-T09-1/tp.git to complete...
+Mar 01, 2022 12:10:33 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T09-2/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T09-2/tp.git' repos/AY2122S2-CS2113T-T09-2_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113T-T09-2_tp/tp_bare'...
@@ -352,7 +336,7 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:33 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T09-3/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T09-3/tp.git' repos/AY2122S2-CS2113T-T09-3_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113T-T09-3_tp/tp_bare'...
@@ -368,7 +352,7 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 01, 2022 12:10:33 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "AY2122S2-CS2113T-T09-1/tp[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/AY2122S2-CS2113T-T09-1/tp.git' repos/AY2122S2-CS2113T-T09-1_tp/tp_bare on path . :
 Cloning into bare repository 'repos/AY2122S2-CS2113T-T09-1_tp/tp_bare'...
@@ -384,7 +368,21 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 28, 2022 12:09:09 AM reposense.report.ReportGenerator generateReposReport
+Mar 01, 2022 12:10:33 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/AY2122S2-CS2113-T11-4/tp.git completed!
+Mar 01, 2022 12:10:33 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/19] Analyzing https://github.com/AY2122S2-CS2113-T11-4/tp.git (master)...
+Mar 01, 2022 12:10:33 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/AY2122S2-CS2113-T11-4/tp.git (master) does not contain a standalone config file.
+Mar 01, 2022 12:10:33 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/AY2122S2-CS2113-T11-4/tp.git (master)...
+Mar 01, 2022 12:10:33 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/AY2122S2-CS2113-T11-4/tp.git (master)...
+Mar 01, 2022 12:10:33 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/AY2122S2-CS2113-T11-4/tp.git (master)...
+Mar 01, 2022 12:10:33 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/AY2122S2-CS2113-T11-4/tp.git (master) completed!
+Mar 01, 2022 12:10:33 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/tp-dashboard/tp-dashboard/reposense-report
-Feb 28, 2022 12:09:09 AM reposense.RepoSense main
-INFO: Elapsed processing time: 1.43 second(s)
+Mar 01, 2022 12:10:33 AM reposense.RepoSense main
+INFO: Elapsed processing time: 1.78 second(s)
